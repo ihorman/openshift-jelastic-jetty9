@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+set -u
+
+for dir in logs tmp pid cache  env; do
+	mkdir -p $dir
+done
+

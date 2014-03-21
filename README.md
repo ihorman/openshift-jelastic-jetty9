@@ -1,4 +1,4 @@
-openshift-jelastic-jetty9
-=========================
+openshift-jelastic-basic-cartridge
+==================================
 
-openshift-jelastic-jetty9
+openshift-jelastic-basic-cartridge
