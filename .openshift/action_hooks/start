@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd ${OPENSHIFT_JETTY9_DIR}/versions/9.1.3/
+
+CMD="java -Xms384m -Xmx412m -jar start.jar -Djetty.host=$OPENSHIFT_JETTY9_APP_HOST -Djetty.port=$OPENSHIFT_JETTY9_APP_PORT"
+
+nohup $CMD > $OPENSHIFT_JETTY9_LOG_DIR/server.log 2>&1 &
+
+echo $! > jetty.pid
+
+
