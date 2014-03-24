@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Ensure the previous startup succeeded and this actually exists.
-if [ -d "${OPENSHIFT_JETTY8_DIR}/versions/8.14" ]; then
-    cd ${OPENSHIFT_JETTY8_DIR}/versions/8.14/
+if [ -d "${OPENSHIFT_JETTY9_DIR}/versions/9.1.3" ]; then
+    cd ${OPENSHIFT_JETTY9_DIR}/versions/9.1.3/
 
     # Ensure the process is actually running.
     if ps -p `cat jetty.pid` > /dev/null
