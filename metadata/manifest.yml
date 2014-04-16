@@ -1,0 +1,44 @@
+Name: jetty9
+Cartridge-Short-Name: JETTY9
+Display-Name: JETTY9
+Description: "Jelastic Jetty9"
+Version: '9.1.3'
+License: 'Apache licence'
+License-Url: 
+Vendor: Eclipse
+Cartridge-Version: 9.1.3
+Cartridge-Vendor: Jelastic
+Categories:
+  - service
+  - embedded
+Source-Url: https://github.com/ihorman/openshift-jelastic-jetty9.git
+Website: http://jelastic.com/
+Help-Topics:
+  "Developer Center": https://jelastic.com
+Cart-Data:
+  - Key: OPENSHIFT_APP_DNS
+    Type: environment
+    Description: "Fully qualified domain name for the application."
+  - Key: OPENSHIFT_APP_NAME
+    Type: environment
+    Description: "Application name"
+  - Key: OPENSHIFT_DATA_DIR
+    Type: environment
+    Description: "Directory to store application data files. Preserved across git-pushes. Not shared across gears."
+  - Key: OPENSHIFT_APP_UUID
+    Type: environment
+    Description: "Unique ID which identified the application. Does not change between gears."
+  - Key: OPENSHIFT_GEAR_UUID
+    Type: environment
+    Description: "Unique ID which identified the gear. This value changes between gears."
+Provides:
+  - jetty8
+Scaling:
+  Min: 1
+  Max: 1
+Endpoints:
+  - Private-IP-Name:   APP_HOST
+    Private-Port-Name: APP_PORT
+    Private-Port:      8080
+    Public-Port-Name:  APP_PROXY_PORT
+
